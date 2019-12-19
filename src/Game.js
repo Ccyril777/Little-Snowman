@@ -11,7 +11,7 @@ Ball.Game.prototype = {
 		this.timer = 0;
 		this.totalTimer = 0;
 		this.level = 1;
-		this.maxLevels = 5;
+		this.maxLevels = 6;
 		this.movementForce = 10;
 		this.ballStartPos = { x: Ball._WIDTH*0.5, y: 450 };
 
@@ -92,6 +92,16 @@ Ball.Game.prototype = {
 				{ x: 256, y: 240, t: 'h' },
 				{ x: 180, y: 52, t: 'h' },
 				{ x: 52, y: 148, t: 'w' }
+			],
+			[
+				{ x: 188, y: 352, t: 'h' },
+				{ x: 100, y: 352, t: 'h' },
+				{ x: 5, y: 325, t: 'w' },
+				{ x: 195, y: 325, t: 'w' },
+				{ x: 5, y: 250, t: 'w' },
+				{ x: 125, y: 250, t: 'w' },
+				{ x: 240, y: 150, t: 'h' },
+				{ x: 170, y: 50, t: 'h' },
 			]
 		];
 		for(var i=0; i<this.maxLevels; i++) {
