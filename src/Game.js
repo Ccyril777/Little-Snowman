@@ -24,9 +24,9 @@ Ball.Game.prototype = {
 		this.audioButton.animations.add('true', [0], 10, true);
 		this.audioButton.animations.add('false', [1], 10, true);
 		this.audioButton.animations.play(this.audioStatus);
-		this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
+		this.timerText = this.game.add.text(15, 15, "Temps: "+this.timer, this.fontBig);
 		this.levelText = this.game.add.text(120, 10, "Level: "+this.level+" / "+this.maxLevels, this.fontSmall);
-		this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer, this.fontSmall);
+		this.totalTimeText = this.game.add.text(120, 30, "Temps total: "+this.totalTimer, this.fontSmall);
 
 		this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
 		this.physics.enable(this.hole, Phaser.Physics.ARCADE);
@@ -116,12 +116,12 @@ Ball.Game.prototype = {
 	},
 	updateCounter: function() {
 		this.timer++;
-		this.timerText.setText("Time: "+this.timer);
-		this.totalTimeText.setText("Total time: "+(this.totalTimer+this.timer));
+		this.timerText.setText("Temps: "+this.timer);
+		this.totalTimeText.setText("Temps total: "+(this.totalTimer+this.timer));
 	},
 	managePause: function() {
 		this.game.paused = true;
-		var pausedText = this.add.text(Ball._WIDTH*0.5, 250, "Game paused,\ntap anywhere to continue.", this.fontMessage);
+		var pausedText = this.add.text(Ball._WIDTH*0.5, 250, "PAUSE", this.fontMessage);
 		pausedText.anchor.set(0.5);
 		this.input.onDown.add(function(){
 			pausedText.destroy();
@@ -169,16 +169,16 @@ Ball.Game.prototype = {
 	finishLevel: function() {
 		if(this.level >= this.maxLevels) {
 			this.totalTimer += this.timer;
-			alert('Congratulations, game completed!\nTotal time of play: '+this.totalTimer+' seconds!');
+			alert('Bravo, temps total!\nTotal temps de jeux: '+this.totalTimer+' seconds!');
 			this.game.state.start('MainMenu');
 		}
 		else {
-			alert('Congratulations, level '+this.level+' completed!');
+			alert('Bravo, level '+this.level+' fini!');
 			this.totalTimer += this.timer;
 			this.timer = 0;
 			this.level++;
-			this.timerText.setText("Time: "+this.timer);
-			this.totalTimeText.setText("Total time: "+this.totalTimer);
+			this.timerText.setText("Temps: "+this.timer);
+			this.totalTimeText.setText("Temps total: "+this.totalTimer);
 			this.levelText.setText("Level: "+this.level+" / "+this.maxLevels);
 			this.ball.body.x = this.ballStartPos.x;
 			this.ball.body.y = this.ballStartPos.y;
