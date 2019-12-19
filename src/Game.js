@@ -179,7 +179,7 @@ Ball.Game.prototype = {
 	finishLevel: function() {
 		if(this.level >= this.maxLevels) {
 			this.totalTimer += this.timer;
-			alert('Bravo, temps total!\nTotal temps de jeux: '+this.totalTimer+' seconds!');
+			alert('Bravo, tu as sauvé Noël !\nTotal temps de jeux: '+this.totalTimer+' seconds!');
 			this.game.state.start('MainMenu');
 		}
 		else {
