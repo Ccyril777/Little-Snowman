@@ -11,7 +11,7 @@ Ball.Game.prototype = {
 		this.timer = 0;
 		this.totalTimer = 0;
 		this.level = 1;
-		this.maxLevels = 1;
+		this.maxLevels = 2;
 		this.movementForce = 10;
 		this.ballStartPos = { x: Ball._WIDTH*1.3, y: 400 };
 
@@ -86,8 +86,52 @@ Ball.Game.prototype = {
 				{ x: 600, y: 425, t: 'w' },
 				{ x: 680, y: 425, t: 'w' },
 				{ x: 720, y: 425, t: 'w' },
-			]
-		];
+
+				{ x: 80, y: 224, t: 'w' },
+				{ x: 240, y: 224, t: 'w' },
+				{ x: 350, y: 224, t: 'w' },
+				{ x: 400, y: 224, t: 'w' },
+				{ x: 500, y: 224, t: 'w' },
+				{ x: 670, y: 224, t: 'w' }
+				],
+				[
+				{ x: 0, y: 55, t: 'h' },
+				{ x: 0, y: 180, t: 'h' },
+				{ x: 0, y: 305, t: 'h' },
+				{ x: 815, y: 55, t: 'h' },
+				{ x: 815, y: 180, t: 'h' },
+				{ x: 815, y: 305, t: 'h' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 150, y: 52, t: 'w' },
+				{ x: 270, y: 52, t: 'w' },
+				{ x: 390, y: 52, t: 'w' },
+				{ x: 510, y: 52, t: 'w' },
+				{ x: 630, y: 52, t: 'w' },
+				{ x: 730, y: 52, t: 'w' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 0, y: 425, t: 'w' },
+				{ x: 120, y: 425, t: 'w' },
+				{ x: 240, y: 425, t: 'w' },
+				{ x: 360, y: 425, t: 'w' },
+				{ x: 480, y: 425, t: 'w' },
+				{ x: 600, y: 425, t: 'w' },
+				{ x: 680, y: 425, t: 'w' },
+				{ x: 720, y: 425, t: 'w' },
+
+				{ x: 230, y: 320, t: 'w' },
+				{ x: 230, y: 250, t: 'w' },
+				{ x: 120, y: 250, t: 'w' },
+				{ x: 340, y: 250, t: 'w' },
+				{ x: 440, y: 250, t: 'w' },
+				{ x: 600, y: 250, t: 'w' },
+				{ x: 340, y: 320, t: 'h' },
+				{ x: 470, y: 320, t: 'h' },
+				{ x: 70, y: 150, t: 'w' },
+				{ x: 500, y: 150, t: 'w' }
+				],
+			];
 		for(var i=0; i<this.maxLevels; i++) {
 			var newLevel = this.add.group();
 			newLevel.enableBody = true;

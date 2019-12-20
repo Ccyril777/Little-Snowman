@@ -6,7 +6,7 @@ Ball.Preloader.prototype = {
 		this.load.setPreloadSprite(this.preloadBar);
 
 		this.load.image('ball', 'img/snow.png');
-		this.load.image('hole', 'img/tree.png');
+		this.load.image('hole', 'img/icehole.png');
 		this.load.image('element-w', 'img/element-w.png');
 		this.load.image('element-h', 'img/element-h.png');
 		this.load.image('panel', 'img/panel.png');
