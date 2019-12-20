@@ -11,9 +11,9 @@ Ball.Game.prototype = {
 		this.timer = 0;
 		this.totalTimer = 0;
 		this.level = 1;
-		this.maxLevels = 6;
+		this.maxLevels = 1;
 		this.movementForce = 10;
-		this.ballStartPos = { x: Ball._WIDTH*1.3, y: 420 };
+		this.ballStartPos = { x: Ball._WIDTH*1.3, y: 400 };
 
 		this.pauseButton = this.add.button(Ball._WIDTH+500, 8, 'button-pause', this.managePause, this);
 		this.pauseButton.anchor.set(1,0);
@@ -62,46 +62,30 @@ Ball.Game.prototype = {
 		this.levels = [];
 		this.levelData = [
 			[
-				{ x: 96, y: 224, t: 'w' }
-			],
-			[
-				{ x: 72, y: 320, t: 'w' },
-				{ x: 200, y: 320, t: 'h' },
-				{ x: 72, y: 150, t: 'w' }
-			],
-			[
-				{ x: 64, y: 352, t: 'h' },
-				{ x: 224, y: 352, t: 'h' },
-				{ x: 0, y: 240, t: 'w' },
-				{ x: 128, y: 240, t: 'w' },
-				{ x: 200, y: 52, t: 'h' }
-			],
-			[
-				{ x: 78, y: 352, t: 'h' },
-				{ x: 78, y: 320, t: 'w' },
-				{ x: 0, y: 240, t: 'w' },
-				{ x: 192, y: 240, t: 'w' },
-				{ x: 30, y: 150, t: 'w' },
-				{ x: 140, y: 150, t: 'w' }
-			],
-			[
-				{ x: 188, y: 352, t: 'h' },
-				{ x: 92, y: 320, t: 'w' },
-				{ x: 0, y: 240, t: 'w' },
-				{ x: 128, y: 240, t: 'w' },
-				{ x: 256, y: 240, t: 'h' },
-				{ x: 180, y: 52, t: 'h' },
-				{ x: 52, y: 148, t: 'w' }
-			],
-			[
-				{ x: 188, y: 352, t: 'h' },
-				{ x: 100, y: 352, t: 'h' },
-				{ x: 5, y: 325, t: 'w' },
-				{ x: 195, y: 325, t: 'w' },
-				{ x: 5, y: 250, t: 'w' },
-				{ x: 125, y: 250, t: 'w' },
-				{ x: 240, y: 150, t: 'h' },
-				{ x: 170, y: 50, t: 'h' },
+				{ x: 0, y: 55, t: 'h' },
+				{ x: 0, y: 180, t: 'h' },
+				{ x: 0, y: 305, t: 'h' },
+				{ x: 815, y: 55, t: 'h' },
+				{ x: 815, y: 180, t: 'h' },
+				{ x: 815, y: 305, t: 'h' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 150, y: 52, t: 'w' },
+				{ x: 270, y: 52, t: 'w' },
+				{ x: 390, y: 52, t: 'w' },
+				{ x: 510, y: 52, t: 'w' },
+				{ x: 630, y: 52, t: 'w' },
+				{ x: 730, y: 52, t: 'w' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 30, y: 52, t: 'w' },
+				{ x: 0, y: 425, t: 'w' },
+				{ x: 120, y: 425, t: 'w' },
+				{ x: 240, y: 425, t: 'w' },
+				{ x: 360, y: 425, t: 'w' },
+				{ x: 480, y: 425, t: 'w' },
+				{ x: 600, y: 425, t: 'w' },
+				{ x: 680, y: 425, t: 'w' },
+				{ x: 720, y: 425, t: 'w' },
 			]
 		];
 		for(var i=0; i<this.maxLevels; i++) {
