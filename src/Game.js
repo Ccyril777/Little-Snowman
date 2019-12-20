@@ -129,7 +129,9 @@ Ball.Game.prototype = {
 				{ x: 340, y: 320, t: 'h' },
 				{ x: 470, y: 320, t: 'h' },
 				{ x: 70, y: 150, t: 'w' },
-				{ x: 500, y: 150, t: 'w' }
+				{ x: 500, y: 150, t: 'w' },
+				{ x: 300, y: 150, t: 'w' },
+				{ x: 700, y: 150, t: 'w' }
 				],
 			];
 		for(var i=0; i<this.maxLevels; i++) {
