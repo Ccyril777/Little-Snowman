@@ -13,9 +13,9 @@ Ball.Game.prototype = {
 		this.level = 1;
 		this.maxLevels = 6;
 		this.movementForce = 10;
-		this.ballStartPos = { x: Ball._WIDTH*0.5, y: 450 };
+		this.ballStartPos = { x: Ball._WIDTH*1.3, y: 420 };
 
-		this.pauseButton = this.add.button(Ball._WIDTH-8, 8, 'button-pause', this.managePause, this);
+		this.pauseButton = this.add.button(Ball._WIDTH+500, 8, 'button-pause', this.managePause, this);
 		this.pauseButton.anchor.set(1,0);
 		this.pauseButton.input.useHandCursor = true;
 		this.audioButton = this.add.button(Ball._WIDTH-this.pauseButton.width-8*2, 8, 'button-audio', this.manageAudio, this);
@@ -28,7 +28,7 @@ Ball.Game.prototype = {
 		this.levelText = this.game.add.text(120, 10, "Level: "+this.level+" / "+this.maxLevels, this.fontSmall);
 		this.totalTimeText = this.game.add.text(120, 30, "Temps total: "+this.totalTimer, this.fontSmall);
 
-		this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
+		this.hole = this.add.sprite(Ball._WIDTH*1.3, 90, 'hole');
 		this.physics.enable(this.hole, Phaser.Physics.ARCADE);
 		this.hole.anchor.set(0.5);
 		this.hole.body.setSize(2, 2);
@@ -51,10 +51,10 @@ Ball.Game.prototype = {
 		this.borderGroup = this.add.group();
 		this.borderGroup.enableBody = true;
 		this.borderGroup.physicsBodyType = Phaser.Physics.ARCADE;
-		this.borderGroup.create(0, 50, 'border-horizontal');
-		this.borderGroup.create(0, Ball._HEIGHT-2, 'border-horizontal');
-		this.borderGroup.create(0, 0, 'border-vertical');
-		this.borderGroup.create(Ball._WIDTH-2, 0, 'border-vertical');
+		// this.borderGroup.create(0, 50, 'border-horizontal');
+		// this.borderGroup.create(0, Ball._HEIGHT-2, 'border-horizontal');
+		// this.borderGroup.create(0, 0, 'border-vertical');
+		// this.borderGroup.create(Ball._WIDTH-2, 0, 'border-vertical');
 		this.borderGroup.setAll('body.immovable', true);
 		this.bounceSound = this.game.add.audio('audio-santa');
 	},
@@ -82,7 +82,7 @@ Ball.Game.prototype = {
 				{ x: 0, y: 240, t: 'w' },
 				{ x: 192, y: 240, t: 'w' },
 				{ x: 30, y: 150, t: 'w' },
-				{ x: 158, y: 150, t: 'w' }
+				{ x: 140, y: 150, t: 'w' }
 			],
 			[
 				{ x: 188, y: 352, t: 'h' },
@@ -131,7 +131,7 @@ Ball.Game.prototype = {
 	},
 	managePause: function() {
 		this.game.paused = true;
-		var pausedText = this.add.text(Ball._WIDTH*0.5, 250, "PAUSE", this.fontMessage);
+		var pausedText = this.add.text(Ball._WIDTH*1.3, 250, "PAUSE", this.fontMessage);
 		pausedText.anchor.set(0.5);
 		this.input.onDown.add(function(){
 			pausedText.destroy();

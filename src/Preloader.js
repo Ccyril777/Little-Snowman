@@ -15,8 +15,8 @@ Ball.Preloader.prototype = {
 		this.load.image('screen-bg', 'img/ground.jpeg');
 		this.load.image('screen-mainmenu', 'img/screen-mainmenu.png');
 		this.load.image('screen-howtoplay', 'img/screen-howtoplay.png');
-		this.load.image('border-horizontal', 'img/border-horizontal.png');
-		this.load.image('border-vertical', 'img/border-vertical.png');
+		// this.load.image('border-horizontal', 'img/border-horizontal.png');
+		// this.load.image('border-vertical', 'img/border-vertical.png');
 
 		this.load.spritesheet('button-audio', 'img/button-audio.png', 35, 35);
 		this.load.spritesheet('button-start', 'img/button-start.png', 146, 51);
