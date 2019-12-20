@@ -4,9 +4,9 @@ Ball.Game.prototype = {
 		this.add.sprite(0, 0, 'screen-bg');
 		this.add.sprite(0, 0, 'panel');
 		this.physics.startSystem(Phaser.Physics.ARCADE);
-		this.fontSmall = { font: "16px Arial", fill: "#e4beef" };
-		this.fontBig = { font: "24px Arial", fill: "#e4beef" };
-		this.fontMessage = { font: "24px Arial", fill: "#e4beef",  align: "center", stroke: "#320C3E", strokeThickness: 4 };
+		this.fontSmall = { font: "16px Arial", fill: "#ffffff" };
+		this.fontBig = { font: "24px Arial", fill: "#ffffff" };
+		this.fontMessage = { font: "24px Arial", fill: "#ffffff",  align: "center", stroke: "#320C3E", strokeThickness: 4 };
 		this.audioStatus = true;
 		this.timer = 0;
 		this.totalTimer = 0;
@@ -25,8 +25,8 @@ Ball.Game.prototype = {
 		this.audioButton.animations.add('false', [1], 10, true);
 		this.audioButton.animations.play(this.audioStatus);
 		this.timerText = this.game.add.text(15, 15, "Temps: "+this.timer, this.fontBig);
-		this.levelText = this.game.add.text(120, 10, "Level: "+this.level+" / "+this.maxLevels, this.fontSmall);
-		this.totalTimeText = this.game.add.text(120, 30, "Temps total: "+this.totalTimer, this.fontSmall);
+		this.levelText = this.game.add.text(140, 10, "Level: "+this.level+" / "+this.maxLevels, this.fontSmall);
+		this.totalTimeText = this.game.add.text(140, 30, "Temps total: "+this.totalTimer, this.fontSmall);
 
 		this.hole = this.add.sprite(Ball._WIDTH*1.3, 90, 'hole');
 		this.physics.enable(this.hole, Phaser.Physics.ARCADE);
